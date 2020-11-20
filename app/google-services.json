@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "491887026293",
+    "firebase_url": "https://kanteen-6abd1.firebaseio.com",
+    "project_id": "kanteen-6abd1",
+    "storage_bucket": "kanteen-6abd1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:491887026293:android:900ae4c64d545c2765d83c",
+        "android_client_info": {
+          "package_name": "com.TheRookies.kanteen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "491887026293-6o1k0qntjglqiellsnjqlbvb46b49vul.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.TheRookies.kanteen",
+            "certificate_hash": "5c9fda36f44af4646d526abf5d25d6a08efb7269"
+          }
+        },
+        {
+          "client_id": "491887026293-0d2g7f2i51d1gdoren6vl09vlb5tfmqv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaS-yJUBQ8f9WxfRn08pYLMPeNEdij7hg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "491887026293-0d2g7f2i51d1gdoren6vl09vlb5tfmqv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
