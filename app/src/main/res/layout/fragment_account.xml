@@ -101,7 +101,7 @@
                 >
 
 
-                >
+
 
                 <ImageView
                     android:layout_width="60dp"
@@ -196,9 +196,10 @@
                         android:layout_below="@+id/name"
                         android:backgroundTint="#3f51b5"
                         android:text="example@abc.com"
+
                         android:paddingStart="30dp"
                         android:textColor="#70000000"
-                        android:textSize="20sp"
+                        android:textSize="14sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.807"
                         app:layout_constraintStart_toStartOf="parent"
