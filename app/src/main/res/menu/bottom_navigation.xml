@@ -5,9 +5,10 @@
         android:icon="@drawable/home_white"
         android:title="Home"
         />
-    <item android:id="@+id/navigation_schedule"
+    <item
+        android:id="@+id/navigation_schedule"
         android:icon="@drawable/food_white"
-        android:title="Schedule" />
+        android:title="Order Details" />
 
     <item android:id="@+id/navigation_location"
         android:icon="@drawable/accout_white"
