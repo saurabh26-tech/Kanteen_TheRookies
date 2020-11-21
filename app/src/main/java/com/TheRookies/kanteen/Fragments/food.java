@@ -1,7 +1,9 @@
 package com.TheRookies.kanteen.Fragments;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -9,58 +11,54 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.TheRookies.kanteen.R;
+import com.baoyachi.stepview.VerticalStepView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link food#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class food extends Fragment {
+    int status;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public food() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment food.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static food newInstance(String param1, String param2) {
-        food fragment = new food();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
+    VerticalStepView verticalStepView;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_food, container, false);
+
+        View view= inflater.inflate(R.layout.fragment_food, container, false);
+
+
+
+
+        verticalStepView=view.findViewById(R.id.verticalstepview);
+
+        List<String> sources = new ArrayList<>();
+        sources.add("Order Placed");
+        sources.add("Cooking");
+        sources.add("Food is Ready");
+
+
+
+        verticalStepView.setStepsViewIndicatorComplectingPosition(sources.size()-2).reverseDraw(false)
+                .setStepViewTexts(sources)
+                .setLinePaddingProportion(0.85f)
+                .setStepsViewIndicatorCompletedLineColor(Color.parseColor("#2A2A72"))
+                .setStepViewComplectedTextColor(Color.parseColor("#0EBFE9"))
+                .setStepViewUnComplectedTextColor(Color.parseColor("#8B0000"))
+                .setStepViewComplectedTextColor(Color.parseColor("#0EBFE9"))
+                .setStepsViewIndicatorUnCompletedLineColor(Color.parseColor("#8B0000"))
+                .setStepsViewIndicatorCompleteIcon(ContextCompat.getDrawable(getActivity(), R.drawable.check_circle))
+                .setStepsViewIndicatorAttentionIcon(ContextCompat.getDrawable(getActivity(), R.drawable.report))
+                .setStepsViewIndicatorDefaultIcon(ContextCompat.getDrawable(getActivity(), R.drawable.radio));
+        verticalStepView.setStepsViewIndicatorComplectingPosition(status);
+
+
+
+
+
+
+
+        return view;
+
     }
 }

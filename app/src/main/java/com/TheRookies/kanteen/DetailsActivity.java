@@ -82,7 +82,16 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
                     }});}
 
-                    private void uploadFile() {
+            @Override
+            public void onBackPressed() {
+
+                if(academics==null)
+                {
+                    Toast.makeText(this, "Please Fill The Details", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            private void uploadFile() {
 
 
                         if (imageuri != null) {

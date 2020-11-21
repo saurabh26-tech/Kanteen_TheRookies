@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="20dp"
+    android:outlineSpotShadowColor="@color/colorPrimaryDark"
+    android:background="@color/colorPrimaryDark"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/cuisine_image"
+        android:layout_margin="30dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/food"
+        />
+    <TextView
+        android:id="@+id/cuisine_name"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CuisineName"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/open_sans_bold"
+        android:layout_gravity="center_horizontal"/>
+
+</androidx.cardview.widget.CardView>
