@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.TheRookies.kanteen.FoodDetailsActivity;
 import com.TheRookies.kanteen.Model.Dish;
 import com.TheRookies.kanteen.Model.Food;
 import com.TheRookies.kanteen.R;
@@ -75,12 +76,12 @@ public class home extends Fragment {
                         Picasso.get().load(model.getCuisineimageurl()).placeholder(R.drawable.kanteenanim).into(holder.CuisineImage);
 
 
-//                        holder.itemView.setOnClickListener(new View.OnClickListener() {
-//                            @Override
-//                            public void onClick(View view) {
-//
-//                            }
-//                        });
+                        holder.itemView.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+
+                            }
+                        });
 
 
                     }
@@ -116,10 +117,9 @@ public class home extends Fragment {
                         holder.itemView.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
-
-//                                Intent intent = new Intent(getActivity(), AddDishActivity.class);
-//                                intent.putExtra("CuisineName", model.getCuisinename());
-//                                startActivity(intent);
+                                Intent intent=new Intent(getActivity(), FoodDetailsActivity.class);
+                                intent.putExtra("DishId",model.getDishId());
+                                startActivity(intent);
 
 
 
